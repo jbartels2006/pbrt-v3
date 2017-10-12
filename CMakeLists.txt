@@ -452,6 +452,7 @@ FILE ( GLOB PBRT_SOURCE
   src/ext/*.cpp
   src/accelerators/*.cpp
   src/cameras/*.cpp
+  src/films/*.cpp
   src/filters/*.cpp
   src/integrators/*.cpp
   src/lights/*.cpp

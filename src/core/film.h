@@ -52,6 +52,7 @@ namespace pbrt {
 struct FilmTilePixel {
     Spectrum contribSum = 0.f;
     Float filterWeightSum = 0.f;
+    RayDifferential *ray = nullptr;
 };
 
 // Film Declarations
@@ -68,7 +69,7 @@ class Film {
     void MergeFilmTile(std::unique_ptr<FilmTile> tile);
     void SetImage(const Spectrum *img) const;
     void AddSplat(const Point2f &p, Spectrum v);
-    void WriteImage(Float splatScale = 1);
+    virtual void WriteImage(Float splatScale);
     void Clear();
 
     // Film Public Data
@@ -96,6 +97,15 @@ class Film {
 
     // Film Private Methods
     Pixel &GetPixel(const Point2i &p) {
+        CHECK(InsideExclusive(p, croppedPixelBounds));
+        int width = croppedPixelBounds.pMax.x - croppedPixelBounds.pMin.x;
+        int offset = (p.x - croppedPixelBounds.pMin.x) +
+                     (p.y - croppedPixelBounds.pMin.y) * width;
+        return pixels[offset];
+    }
+
+    //TODO: Fix this function to get ptr to place in vector of RayDifferentials for a pixel
+    RayDifferential &GetPixelRay(const Point2i &p) {
         CHECK(InsideExclusive(p, croppedPixelBounds));
         int width = croppedPixelBounds.pMax.x - croppedPixelBounds.pMin.x;
         int offset = (p.x - croppedPixelBounds.pMin.x) +
@@ -161,8 +171,8 @@ class FilmTile {
         }
     }
     //new AddSample function - added ray so we can output depth and other info,  changed by Joe B. 10/11/2017
-    void AddSample(const Point2f &pFilm, Spectrum L,
-                   Float sampleWeight = 1., RayDifferential *ray = nullptr) {
+    virtual void AddSample(const Point2f &pFilm, Spectrum L,
+                   Float sampleWeight, RayDifferential *ray) {
         ProfilePhase _(Prof::AddFilmSample);
         if (L.y() > maxSampleLuminance)
             L *= maxSampleLuminance / L.y();
@@ -199,9 +209,7 @@ class FilmTile {
                 FilmTilePixel &pixel = GetPixel(Point2i(x, y));
                 pixel.contribSum += L * sampleWeight * filterWeight;
                 pixel.filterWeightSum += filterWeight;
-
-                //TODO:Add code here
-
+                pixel.ray = ray;
             }
         }
     }

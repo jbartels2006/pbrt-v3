@@ -336,7 +336,7 @@ void SamplerIntegrator::Render(const Scene &scene) {
     LOG(INFO) << "Rendering finished";
 
     // Save final image after rendering
-    camera->film->WriteImage();
+    camera->film->WriteImage(1); //Changed for multichannel - set splat to 1
 }
 
 Spectrum SamplerIntegrator::SpecularReflect(

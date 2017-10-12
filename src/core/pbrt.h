@@ -129,6 +129,8 @@ class Sampler;
 class Filter;
 class Film;
 class FilmTile;
+class MultichannelFilm; //Added for multichannel output
+class MultichannelFilmTile; //Added for multichannel output
 class BxDF;
 class BRDF;
 class BTDF;

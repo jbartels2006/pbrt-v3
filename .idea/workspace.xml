@@ -3,22 +3,21 @@
   <component name="CMakeRunConfigurationManager" shouldGenerate="true" shouldDeleteObsolete="true" buildAllGenerated="true">
     <generated>
       <config projectName="PBRT-V3" targetName="eLut" />
-      <config projectName="PBRT-V3" targetName="ExperimentalBuild" />
       <config projectName="PBRT-V3" targetName="ContinuousSubmit" />
       <config projectName="PBRT-V3" targetName="ftest" />
       <config projectName="PBRT-V3" targetName="toFloat" />
       <config projectName="PBRT-V3" targetName="ExperimentalMemCheck" />
       <config projectName="PBRT-V3" targetName="Iex" />
-      <config projectName="PBRT-V3" targetName="Ptex_static" />
       <config projectName="PBRT-V3" targetName="NightlyMemCheck" />
       <config projectName="PBRT-V3" targetName="ptxinfo" />
       <config projectName="PBRT-V3" targetName="ExperimentalUpdate" />
+      <config projectName="PBRT-V3" targetName="Half" />
       <config projectName="PBRT-V3" targetName="CopyIlmBaseLibs" />
       <config projectName="PBRT-V3" targetName="glog" />
       <config projectName="PBRT-V3" targetName="ContinuousMemCheck" />
-      <config projectName="PBRT-V3" targetName="IlmThread" />
       <config projectName="PBRT-V3" targetName="NightlySubmit" />
       <config projectName="PBRT-V3" targetName="Imath" />
+      <config projectName="PBRT-V3" targetName="cyhair2pbrt" />
       <config projectName="PBRT-V3" targetName="ContinuousStart" />
       <config projectName="PBRT-V3" targetName="halftest" />
       <config projectName="PBRT-V3" targetName="logging_unittest" />
@@ -26,38 +25,39 @@
       <config projectName="PBRT-V3" targetName="obj2pbrt" />
       <config projectName="PBRT-V3" targetName="NightlyConfigure" />
       <config projectName="PBRT-V3" targetName="ExperimentalTest" />
-      <config projectName="PBRT-V3" targetName="NightlyUpdate" />
       <config projectName="PBRT-V3" targetName="b44ExpLogTable" />
       <config projectName="PBRT-V3" targetName="dwaLookups" />
       <config projectName="PBRT-V3" targetName="rtest" />
       <config projectName="PBRT-V3" targetName="ExperimentalCoverage" />
       <config projectName="PBRT-V3" targetName="NightlyBuild" />
-      <config projectName="PBRT-V3" targetName="imgtool" />
       <config projectName="PBRT-V3" targetName="NightlyCoverage" />
-      <config projectName="PBRT-V3" targetName="Nightly" />
+      <config projectName="PBRT-V3" targetName="IlmThread" />
       <config projectName="PBRT-V3" targetName="ExperimentalStart" />
       <config projectName="PBRT-V3" targetName="ContinuousTest" />
       <config projectName="PBRT-V3" targetName="pbrt_test" />
       <config projectName="PBRT-V3" targetName="ContinuousCoverage" />
       <config projectName="PBRT-V3" targetName="symbolize_unittest" />
-      <config projectName="PBRT-V3" targetName="Experimental" />
+      <config projectName="PBRT-V3" targetName="ExperimentalBuild" />
       <config projectName="PBRT-V3" targetName="Continuous" />
       <config projectName="PBRT-V3" targetName="signalhandler_unittest" />
-      <config projectName="PBRT-V3" targetName="Half" />
+      <config projectName="PBRT-V3" targetName="utilities_unittest" />
+      <config projectName="PBRT-V3" targetName="stl_logging_unittest" />
+      <config projectName="PBRT-V3" targetName="imgtool" />
       <config projectName="PBRT-V3" targetName="pbrt_exe" />
       <config projectName="PBRT-V3" targetName="IexMath" />
       <config projectName="PBRT-V3" targetName="stacktrace_unittest" />
+      <config projectName="PBRT-V3" targetName="Nightly" />
       <config projectName="PBRT-V3" targetName="ContinuousUpdate" />
-      <config projectName="PBRT-V3" targetName="stl_logging_unittest" />
       <config projectName="PBRT-V3" targetName="doc" />
       <config projectName="PBRT-V3" targetName="demangle_unittest" />
       <config projectName="PBRT-V3" targetName="bsdftest" />
       <config projectName="PBRT-V3" targetName="Ptex_dynamic" />
+      <config projectName="PBRT-V3" targetName="Experimental" />
       <config projectName="PBRT-V3" targetName="NightlyTest" />
-      <config projectName="PBRT-V3" targetName="utilities_unittest" />
+      <config projectName="PBRT-V3" targetName="NightlyUpdate" />
       <config projectName="PBRT-V3" targetName="doxygen" />
       <config projectName="PBRT-V3" targetName="pbrt" />
-      <config projectName="PBRT-V3" targetName="cyhair2pbrt" />
+      <config projectName="PBRT-V3" targetName="Ptex_static" />
       <config projectName="PBRT-V3" targetName="ExperimentalConfigure" />
       <config projectName="PBRT-V3" targetName="ExperimentalSubmit" />
       <config projectName="PBRT-V3" targetName="ContinuousBuild" />
@@ -74,13 +74,15 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="0e1986e9-e618-4f0d-a824-8b6763a0fbf0" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/films/multichannel.cpp" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/films/multichannel.h" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/CMakeLists.txt" afterPath="$PROJECT_DIR$/CMakeLists.txt" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/core/film.cpp" afterPath="$PROJECT_DIR$/src/core/film.cpp" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/core/film.h" afterPath="$PROJECT_DIR$/src/core/film.h" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/core/geometry.h" afterPath="$PROJECT_DIR$/src/core/geometry.h" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/core/integrator.cpp" afterPath="$PROJECT_DIR$/src/core/integrator.cpp" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/core/scene.cpp" afterPath="$PROJECT_DIR$/src/core/scene.cpp" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/integrators/bdpt.cpp" afterPath="$PROJECT_DIR$/src/integrators/bdpt.cpp" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/core/pbrt.h" afterPath="$PROJECT_DIR$/src/core/pbrt.h" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/films/multichannel.cpp" afterPath="$PROJECT_DIR$/src/films/multichannel.cpp" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/films/multichannel.h" afterPath="$PROJECT_DIR$/src/films/multichannel.h" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/integrators/sppm.cpp" afterPath="$PROJECT_DIR$/src/integrators/sppm.cpp" />
     </list>
     <ignored path="$PROJECT_DIR$/cmake-build-debug/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -105,9 +107,12 @@
       <file leaf-file-name="api.cpp" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/core/api.cpp">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="382">
-              <caret line="731" column="20" lean-forward="true" selection-start-line="731" selection-start-column="15" selection-end-line="731" selection-end-column="25" />
-              <folding />
+            <state relative-caret-position="-12693">
+              <caret line="731" column="55" lean-forward="true" selection-start-line="731" selection-start-column="55" selection-end-line="731" selection-end-column="55" />
+              <folding>
+                <element signature="e#1493#1509#0" expanded="true" />
+                <element signature="e#1679#1708#0" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -115,8 +120,8 @@
       <file leaf-file-name="film.cpp" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/core/film.cpp">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="288">
-              <caret line="94" column="34" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="251" selection-end-column="0" />
+            <state relative-caret-position="594">
+              <caret line="123" column="34" lean-forward="false" selection-start-line="123" selection-start-column="34" selection-end-line="123" selection-end-column="34" />
               <folding />
             </state>
           </provider>
@@ -125,18 +130,18 @@
       <file leaf-file-name="film.h" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/core/film.h">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="396">
-              <caret line="130" column="43" lean-forward="true" selection-start-line="0" selection-start-column="0" selection-end-line="239" selection-end-column="0" />
+            <state relative-caret-position="96">
+              <caret line="106" column="91" lean-forward="false" selection-start-line="106" selection-start-column="91" selection-end-line="106" selection-end-column="91" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="multichannel.cpp" pinned="false" current-in-tab="true">
+      <file leaf-file-name="multichannel.cpp" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/films/multichannel.cpp">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-934">
-              <caret line="29" column="0" lean-forward="true" selection-start-line="29" selection-start-column="0" selection-end-line="29" selection-end-column="0" />
+            <state relative-caret-position="3528">
+              <caret line="229" column="66" lean-forward="false" selection-start-line="229" selection-start-column="66" selection-end-line="229" selection-end-column="66" />
               <folding>
                 <element signature="e#1495#1520#0" expanded="true" />
               </folding>
@@ -147,9 +152,11 @@
       <file leaf-file-name="multichannel.h" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/films/multichannel.h">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="217">
-              <caret line="96" column="31" lean-forward="true" selection-start-line="96" selection-start-column="31" selection-end-line="96" selection-end-column="31" />
-              <folding />
+            <state relative-caret-position="738">
+              <caret line="148" column="22" lean-forward="false" selection-start-line="148" selection-start-column="22" selection-end-line="148" selection-end-column="22" />
+              <folding>
+                <element signature="e#1619#1636#0" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -157,28 +164,38 @@
       <file leaf-file-name="integrator.cpp" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/core/integrator.cpp">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-2268">
-              <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+            <state relative-caret-position="344">
+              <caret line="330" column="13" lean-forward="false" selection-start-line="330" selection-start-column="0" selection-end-line="331" selection-end-column="0" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="geometry.cpp" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/core/geometry.cpp">
+      <file leaf-file-name="bdpt.cpp" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/integrators/bdpt.cpp">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="0">
-              <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+            <state relative-caret-position="290">
+              <caret line="426" column="18" lean-forward="false" selection-start-line="426" selection-start-column="18" selection-end-line="426" selection-end-column="18" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="geometry.h" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/core/geometry.h">
+      <file leaf-file-name="sppm.cpp" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/integrators/sppm.cpp">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="242">
-              <caret line="889" column="0" lean-forward="true" selection-start-line="889" selection-start-column="0" selection-end-line="889" selection-end-column="0" />
+            <state relative-caret-position="290">
+              <caret line="460" column="41" lean-forward="true" selection-start-line="460" selection-start-column="41" selection-end-line="460" selection-end-column="84" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="CMakeLists.txt" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/CMakeLists.txt">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="-801">
+              <caret line="454" column="17" lean-forward="false" selection-start-line="454" selection-start-column="17" selection-end-line="454" selection-end-column="17" />
               <folding />
             </state>
           </provider>
@@ -187,18 +204,8 @@
       <file leaf-file-name="scene.cpp" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/core/scene.cpp">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="306">
-              <caret line="53" column="43" lean-forward="true" selection-start-line="53" selection-start-column="43" selection-end-line="53" selection-end-column="43" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="primitive.h" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/core/primitive.h">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-1598">
-              <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+            <state relative-caret-position="954">
+              <caret line="69" column="1" lean-forward="false" selection-start-line="69" selection-start-column="1" selection-end-line="69" selection-end-column="1" />
               <folding />
             </state>
           </provider>
@@ -210,6 +217,13 @@
     <findStrings>
       <find>toply</find>
       <find>Ray</find>
+      <find>filmTilePixel</find>
+      <find>multichannelfilmtilepixell</find>
+      <find>MultiCh</find>
+      <find>FilmTile</find>
+      <find>createfilm</find>
+      <find>Makefilm</find>
+      <find>Film</find>
     </findStrings>
     <dirStrings>
       <dir>$PROJECT_DIR$/src/</dir>
@@ -224,9 +238,15 @@
       <list>
         <option value="$PROJECT_DIR$/src/core/geometry.h" />
         <option value="$PROJECT_DIR$/src/core/scene.cpp" />
-        <option value="$PROJECT_DIR$/src/core/film.h" />
-        <option value="$PROJECT_DIR$/src/films/multichannel.h" />
+        <option value="$PROJECT_DIR$/CMakeLists.txt" />
         <option value="$PROJECT_DIR$/src/films/multichannel.cpp" />
+        <option value="$PROJECT_DIR$/src/core/pbrt.h" />
+        <option value="$PROJECT_DIR$/src/core/api.cpp" />
+        <option value="$PROJECT_DIR$/src/integrators/sppm.cpp" />
+        <option value="$PROJECT_DIR$/src/core/integrator.cpp" />
+        <option value="$PROJECT_DIR$/src/films/multichannel.h" />
+        <option value="$PROJECT_DIR$/src/core/film.cpp" />
+        <option value="$PROJECT_DIR$/src/core/film.h" />
       </list>
     </option>
   </component>
@@ -236,9 +256,10 @@
     <detection-done>true</detection-done>
     <sorting>DEFINITION_ORDER</sorting>
   </component>
-  <component name="ProjectFrameBounds">
-    <option name="x" value="1145" />
-    <option name="y" value="439" />
+  <component name="OCFindUsagesOptions" text="true" ivars="false" properties="true" derivedClasses="false" />
+  <component name="ProjectFrameBounds" extendedState="6">
+    <option name="x" value="1171" />
+    <option name="y" value="111" />
     <option name="width" value="1973" />
     <option name="height" value="1032" />
   </component>
@@ -268,6 +289,12 @@
               <item name="PBRT-V3" type="dad4c3:CidrFilesViewHelper$MyProjectTreeStructure$1" />
               <item name="pbrt-v3" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="PBRT-V3" type="dad4c3:CidrFilesViewHelper$MyProjectTreeStructure$1" />
+              <item name="pbrt-v3" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="core" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="PBRT-V3" type="dad4c3:CidrFilesViewHelper$MyProjectTreeStructure$1" />
@@ -571,33 +598,34 @@
       <workItem from="1507085627109" duration="3000" />
       <workItem from="1507564302920" duration="1044000" />
       <workItem from="1507774915036" duration="6212000" />
+      <workItem from="1507831524322" duration="8045000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="8146000" />
+    <option name="totallyTimeSpent" value="16191000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="1145" y="439" width="1973" height="1032" extended-state="0" />
+    <frame x="1145" y="83" width="2495" height="1444" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.2498733" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.1975952" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="CMake" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.3295964" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Data View" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
-      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
     </layout>
   </component>
@@ -614,9 +642,101 @@
   <component name="editorHistoryManager">
     <entry file="file://$PROJECT_DIR$/src/core/api.cpp">
       <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="13158">
+          <caret line="731" column="20" lean-forward="true" selection-start-line="731" selection-start-column="15" selection-end-line="731" selection-end-column="25" />
+          <folding>
+            <element signature="e#1493#1509#0" expanded="true" />
+            <element signature="e#1679#1708#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/core/film.cpp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1692">
+          <caret line="94" column="34" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="251" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/core/film.h">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="2340">
+          <caret line="130" column="39" lean-forward="true" selection-start-line="0" selection-start-column="0" selection-end-line="193" selection-end-column="0" />
+          <folding>
+            <element signature="e#1603#1620#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/films/multichannel.h">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1728">
+          <caret line="96" column="31" lean-forward="true" selection-start-line="96" selection-start-column="31" selection-end-line="96" selection-end-column="31" />
+          <folding>
+            <element signature="e#1619#1636#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/core/integrator.cpp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/core/geometry.cpp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/core/geometry.h">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="16002">
+          <caret line="889" column="0" lean-forward="true" selection-start-line="889" selection-start-column="0" selection-end-line="889" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/core/scene.cpp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="954">
+          <caret line="53" column="1" lean-forward="true" selection-start-line="53" selection-start-column="1" selection-end-line="53" selection-end-column="1" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/core/primitive.h">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/films/multichannel.cpp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="522">
+          <caret line="29" column="0" lean-forward="true" selection-start-line="29" selection-start-column="0" selection-end-line="29" selection-end-column="0" />
+          <folding>
+            <element signature="e#1495#1520#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/core/api.cpp">
+      <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="5940">
           <caret line="330" column="24" lean-forward="false" selection-start-line="330" selection-start-column="24" selection-end-line="330" selection-end-column="24" />
-          <folding />
+          <folding>
+            <element signature="e#1493#1509#0" expanded="true" />
+            <element signature="e#1679#1708#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -624,7 +744,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -640,7 +759,9 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
+          <folding>
+            <element signature="e#1603#1620#0" expanded="false" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -688,7 +809,10 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="5940">
           <caret line="330" column="24" lean-forward="false" selection-start-line="330" selection-start-column="24" selection-end-line="330" selection-end-column="24" />
-          <folding />
+          <folding>
+            <element signature="e#1493#1509#0" expanded="true" />
+            <element signature="e#1679#1708#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -696,7 +820,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -712,7 +835,10 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="5940">
           <caret line="330" column="24" lean-forward="false" selection-start-line="330" selection-start-column="24" selection-end-line="330" selection-end-column="24" />
-          <folding />
+          <folding>
+            <element signature="e#1493#1509#0" expanded="true" />
+            <element signature="e#1679#1708#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -720,7 +846,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -736,7 +861,10 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
+          <folding>
+            <element signature="e#1493#1509#0" expanded="true" />
+            <element signature="e#1679#1708#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -751,15 +879,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/core/pbrt.h">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1602">
-          <caret line="89" column="0" lean-forward="false" selection-start-line="89" selection-start-column="0" selection-end-line="89" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -779,25 +898,17 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/core/integrator.cpp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-2268">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/core/geometry.h">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="242">
-          <caret line="889" column="0" lean-forward="true" selection-start-line="889" selection-start-column="0" selection-end-line="889" selection-end-column="0" />
+        <state relative-caret-position="16002">
+          <caret line="889" column="0" lean-forward="false" selection-start-line="889" selection-start-column="0" selection-end-line="889" selection-end-column="0" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/core/primitive.h">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-1598">
+        <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding />
         </state>
@@ -805,51 +916,120 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/core/scene.cpp">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="306">
-          <caret line="53" column="43" lean-forward="true" selection-start-line="53" selection-start-column="43" selection-end-line="53" selection-end-column="43" />
+        <state relative-caret-position="954">
+          <caret line="69" column="1" lean-forward="false" selection-start-line="69" selection-start-column="1" selection-end-line="69" selection-end-column="1" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/build/install_manifest.txt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-8643">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/build/pbrtparse.cpp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-23112">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/CMakeLists.txt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-801">
+          <caret line="454" column="17" lean-forward="false" selection-start-line="454" selection-start-column="17" selection-end-line="454" selection-end-column="17" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/core/pbrt.h">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="527">
+          <caret line="144" column="22" lean-forward="false" selection-start-line="144" selection-start-column="22" selection-end-line="144" selection-end-column="22" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/cameras/environment.cpp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="437">
+          <caret line="57" column="19" lean-forward="false" selection-start-line="57" selection-start-column="19" selection-end-line="57" selection-end-column="19" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/core/api.cpp">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="382">
-          <caret line="731" column="20" lean-forward="true" selection-start-line="731" selection-start-column="15" selection-end-line="731" selection-end-column="25" />
+        <state relative-caret-position="-12693">
+          <caret line="731" column="55" lean-forward="true" selection-start-line="731" selection-start-column="55" selection-end-line="731" selection-end-column="55" />
+          <folding>
+            <element signature="e#1493#1509#0" expanded="true" />
+            <element signature="e#1679#1708#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/films/multichannel.cpp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="3528">
+          <caret line="229" column="66" lean-forward="false" selection-start-line="229" selection-start-column="66" selection-end-line="229" selection-end-column="66" />
+          <folding>
+            <element signature="e#1495#1520#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/films/multichannel.h">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="738">
+          <caret line="148" column="22" lean-forward="false" selection-start-line="148" selection-start-column="22" selection-end-line="148" selection-end-column="22" />
+          <folding>
+            <element signature="e#1619#1636#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/core/integrator.cpp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="344">
+          <caret line="330" column="13" lean-forward="false" selection-start-line="330" selection-start-column="0" selection-end-line="331" selection-end-column="0" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/core/film.h">
+    <entry file="file://$PROJECT_DIR$/src/integrators/bdpt.cpp">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="396">
-          <caret line="130" column="43" lean-forward="true" selection-start-line="0" selection-start-column="0" selection-end-line="239" selection-end-column="0" />
+        <state relative-caret-position="290">
+          <caret line="426" column="18" lean-forward="false" selection-start-line="426" selection-start-column="18" selection-end-line="426" selection-end-column="18" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/core/film.cpp">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="288">
-          <caret line="94" column="34" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="251" selection-end-column="0" />
+        <state relative-caret-position="594">
+          <caret line="123" column="34" lean-forward="false" selection-start-line="123" selection-start-column="34" selection-end-line="123" selection-end-column="34" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/films/multichannel.h">
+    <entry file="file://$PROJECT_DIR$/src/core/film.h">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="217">
-          <caret line="96" column="31" lean-forward="true" selection-start-line="96" selection-start-column="31" selection-end-line="96" selection-end-column="31" />
+        <state relative-caret-position="96">
+          <caret line="106" column="91" lean-forward="false" selection-start-line="106" selection-start-column="91" selection-end-line="106" selection-end-column="91" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/films/multichannel.cpp">
+    <entry file="file://$PROJECT_DIR$/src/integrators/sppm.cpp">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-934">
-          <caret line="29" column="0" lean-forward="true" selection-start-line="29" selection-start-column="0" selection-end-line="29" selection-end-column="0" />
-          <folding>
-            <element signature="e#1495#1520#0" expanded="true" />
-          </folding>
+        <state relative-caret-position="290">
+          <caret line="460" column="41" lean-forward="true" selection-start-line="460" selection-start-column="41" selection-end-line="460" selection-end-column="84" />
+          <folding />
         </state>
       </provider>
     </entry>

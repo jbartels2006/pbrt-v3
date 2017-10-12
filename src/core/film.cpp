@@ -126,6 +126,8 @@ void Film::MergeFilmTile(std::unique_ptr<FilmTile> tile) {
         tilePixel.contribSum.ToXYZ(xyz);
         for (int i = 0; i < 3; ++i) mergePixel.xyz[i] += xyz[i];
         mergePixel.filterWeightSum += tilePixel.filterWeightSum;
+        RayDifferential &rayPixel = GetPixelRay(pixel);
+        rayPixel = *tilePixel.ray;
     }
 }
 

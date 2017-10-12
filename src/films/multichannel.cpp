@@ -42,7 +42,7 @@ namespace pbrt {
     STAT_MEMORY_COUNTER("Memory/Film pixels", filmPixelMemory);
 
 // Film Method Definitions
-    Film::Film(const Point2i &resolution, const Bounds2f &cropWindow,
+    MultichannelFilm::MultichannelFilm(const Point2i &resolution, const Bounds2f &cropWindow,
                std::unique_ptr<Filter> filt, Float diagonal,
                const std::string &filename, Float scale, Float maxSampleLuminance)
             : fullResolution(resolution),
@@ -77,7 +77,7 @@ namespace pbrt {
         }
     }
 
-    Bounds2i Film::GetSampleBounds() const {
+    Bounds2i MultichannelFilm::GetSampleBounds() const {
         Bounds2f floatBounds(Floor(Point2f(croppedPixelBounds.pMin) +
                                    Vector2f(0.5f, 0.5f) - filter->radius),
                              Ceil(Point2f(croppedPixelBounds.pMax) -
@@ -85,14 +85,14 @@ namespace pbrt {
         return (Bounds2i)floatBounds;
     }
 
-    Bounds2f Film::GetPhysicalExtent() const {
+    Bounds2f MultichannelFilm::GetPhysicalExtent() const {
         Float aspect = (Float)fullResolution.y / (Float)fullResolution.x;
         Float x = std::sqrt(diagonal * diagonal / (1 + aspect * aspect));
         Float y = aspect * x;
         return Bounds2f(Point2f(-x / 2, -y / 2), Point2f(x / 2, y / 2));
     }
 
-    std::unique_ptr<FilmTile> Film::GetFilmTile(const Bounds2i &sampleBounds) {
+    std::unique_ptr<MultichannelFilmTile> MultichannelFilm::GetFilmTile(const Bounds2i &sampleBounds) {
         // Bound image pixels that samples in _sampleBounds_ contribute to
         Vector2f halfPixel = Vector2f(0.5f, 0.5f);
         Bounds2f floatBounds = (Bounds2f)sampleBounds;
@@ -100,12 +100,12 @@ namespace pbrt {
         Point2i p1 = (Point2i)Floor(floatBounds.pMax - halfPixel + filter->radius) +
                      Point2i(1, 1);
         Bounds2i tilePixelBounds = Intersect(Bounds2i(p0, p1), croppedPixelBounds);
-        return std::unique_ptr<FilmTile>(new FilmTile(
+        return std::unique_ptr<MultichannelFilmTile>(new MultichannelFilmTile(
                 tilePixelBounds, filter->radius, filterTable, filterTableWidth,
                 maxSampleLuminance));
     }
 
-    void Film::Clear() {
+    void MultichannelFilm::Clear() {
         for (Point2i p : croppedPixelBounds) {
             Pixel &pixel = GetPixel(p);
             for (int c = 0; c < 3; ++c)
@@ -114,13 +114,13 @@ namespace pbrt {
         }
     }
 
-    void Film::MergeFilmTile(std::unique_ptr<FilmTile> tile) {
+    void MultichannelFilm::MergeFilmTile(std::unique_ptr<MultichannelFilmTile> tile) {
         ProfilePhase p(Prof::MergeFilmTile);
         VLOG(1) << "Merging film tile " << tile->pixelBounds;
         std::lock_guard<std::mutex> lock(mutex);
         for (Point2i pixel : tile->GetPixelBounds()) {
             // Merge _pixel_ into _Film::pixels_
-            const FilmTilePixel &tilePixel = tile->GetPixel(pixel);
+            const MultichannelFilmTilePixel &tilePixel = tile->GetPixel(pixel);
             Pixel &mergePixel = GetPixel(pixel);
             Float xyz[3];
             tilePixel.contribSum.ToXYZ(xyz);
@@ -129,7 +129,7 @@ namespace pbrt {
         }
     }
 
-    void Film::SetImage(const Spectrum *img) const {
+    void MultichannelFilm::SetImage(const Spectrum *img) const {
         int nPixels = croppedPixelBounds.Area();
         for (int i = 0; i < nPixels; ++i) {
             Pixel &p = pixels[i];
@@ -139,7 +139,7 @@ namespace pbrt {
         }
     }
 
-    void Film::AddSplat(const Point2f &p, Spectrum v) {
+    void MultichannelFilm::AddSplat(const Point2f &p, Spectrum v) {
         ProfilePhase pp(Prof::SplatFilm);
 
         if (v.HasNaNs()) {
@@ -165,7 +165,7 @@ namespace pbrt {
         for (int i = 0; i < 3; ++i) pixel.splatXYZ[i].Add(xyz[i]);
     }
 
-    void Film::WriteImage(Float splatScale) {
+    void MultichannelFilm::WriteImage(Float splatScale) {
         // Convert image to RGB and compute final pixel values
         LOG(INFO) <<
                   "Converting image to RGB and computing final weighted pixel values";
@@ -209,7 +209,7 @@ namespace pbrt {
         pbrt::WriteImage(filename, &rgb[0], croppedPixelBounds, fullResolution);
     }
 
-    Film *CreateFilm(const ParamSet &params, std::unique_ptr<Filter> filter) {
+    MultichannelFilm *CreateFilm(const ParamSet &params, std::unique_ptr<Filter> filter) {
         // Intentionally use FindOneString() rather than FindOneFilename() here
         // so that the rendered image is left in the working directory, rather
         // than the directory the scene file lives in.
@@ -244,7 +244,7 @@ namespace pbrt {
         Float diagonal = params.FindOneFloat("diagonal", 35.);
         Float maxSampleLuminance = params.FindOneFloat("maxsampleluminance",
                                                        Infinity);
-        return new Film(Point2i(xres, yres), crop, std::move(filter), diagonal,
+        return new MultichannelFilm(Point2i(xres, yres), crop, std::move(filter), diagonal,
                         filename, scale, maxSampleLuminance);
     }
 

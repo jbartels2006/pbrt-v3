@@ -458,7 +458,7 @@ void SPPMIntegrator::Render(const Scene &scene) {
                 }
             }
             camera->film->SetImage(image.get());
-            camera->film->WriteImage();
+            camera->film->WriteImage(1); //Changed for multichannel - set splat to 1
             // Write SPPM radius image, if requested
             if (getenv("SPPM_RADIUS")) {
                 std::unique_ptr<Float[]> rimg(
