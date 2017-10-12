@@ -1,0 +1,857 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="CMakeRunConfigurationManager" shouldGenerate="true" shouldDeleteObsolete="true" buildAllGenerated="true">
+    <generated>
+      <config projectName="PBRT-V3" targetName="eLut" />
+      <config projectName="PBRT-V3" targetName="ExperimentalBuild" />
+      <config projectName="PBRT-V3" targetName="ContinuousSubmit" />
+      <config projectName="PBRT-V3" targetName="ftest" />
+      <config projectName="PBRT-V3" targetName="toFloat" />
+      <config projectName="PBRT-V3" targetName="ExperimentalMemCheck" />
+      <config projectName="PBRT-V3" targetName="Iex" />
+      <config projectName="PBRT-V3" targetName="Ptex_static" />
+      <config projectName="PBRT-V3" targetName="NightlyMemCheck" />
+      <config projectName="PBRT-V3" targetName="ptxinfo" />
+      <config projectName="PBRT-V3" targetName="ExperimentalUpdate" />
+      <config projectName="PBRT-V3" targetName="CopyIlmBaseLibs" />
+      <config projectName="PBRT-V3" targetName="glog" />
+      <config projectName="PBRT-V3" targetName="ContinuousMemCheck" />
+      <config projectName="PBRT-V3" targetName="IlmThread" />
+      <config projectName="PBRT-V3" targetName="NightlySubmit" />
+      <config projectName="PBRT-V3" targetName="Imath" />
+      <config projectName="PBRT-V3" targetName="ContinuousStart" />
+      <config projectName="PBRT-V3" targetName="halftest" />
+      <config projectName="PBRT-V3" targetName="logging_unittest" />
+      <config projectName="PBRT-V3" targetName="IlmImf" />
+      <config projectName="PBRT-V3" targetName="obj2pbrt" />
+      <config projectName="PBRT-V3" targetName="NightlyConfigure" />
+      <config projectName="PBRT-V3" targetName="ExperimentalTest" />
+      <config projectName="PBRT-V3" targetName="NightlyUpdate" />
+      <config projectName="PBRT-V3" targetName="b44ExpLogTable" />
+      <config projectName="PBRT-V3" targetName="dwaLookups" />
+      <config projectName="PBRT-V3" targetName="rtest" />
+      <config projectName="PBRT-V3" targetName="ExperimentalCoverage" />
+      <config projectName="PBRT-V3" targetName="NightlyBuild" />
+      <config projectName="PBRT-V3" targetName="imgtool" />
+      <config projectName="PBRT-V3" targetName="NightlyCoverage" />
+      <config projectName="PBRT-V3" targetName="Nightly" />
+      <config projectName="PBRT-V3" targetName="ExperimentalStart" />
+      <config projectName="PBRT-V3" targetName="ContinuousTest" />
+      <config projectName="PBRT-V3" targetName="pbrt_test" />
+      <config projectName="PBRT-V3" targetName="ContinuousCoverage" />
+      <config projectName="PBRT-V3" targetName="symbolize_unittest" />
+      <config projectName="PBRT-V3" targetName="Experimental" />
+      <config projectName="PBRT-V3" targetName="Continuous" />
+      <config projectName="PBRT-V3" targetName="signalhandler_unittest" />
+      <config projectName="PBRT-V3" targetName="Half" />
+      <config projectName="PBRT-V3" targetName="pbrt_exe" />
+      <config projectName="PBRT-V3" targetName="IexMath" />
+      <config projectName="PBRT-V3" targetName="stacktrace_unittest" />
+      <config projectName="PBRT-V3" targetName="ContinuousUpdate" />
+      <config projectName="PBRT-V3" targetName="stl_logging_unittest" />
+      <config projectName="PBRT-V3" targetName="doc" />
+      <config projectName="PBRT-V3" targetName="demangle_unittest" />
+      <config projectName="PBRT-V3" targetName="bsdftest" />
+      <config projectName="PBRT-V3" targetName="Ptex_dynamic" />
+      <config projectName="PBRT-V3" targetName="NightlyTest" />
+      <config projectName="PBRT-V3" targetName="utilities_unittest" />
+      <config projectName="PBRT-V3" targetName="doxygen" />
+      <config projectName="PBRT-V3" targetName="pbrt" />
+      <config projectName="PBRT-V3" targetName="cyhair2pbrt" />
+      <config projectName="PBRT-V3" targetName="ExperimentalConfigure" />
+      <config projectName="PBRT-V3" targetName="ExperimentalSubmit" />
+      <config projectName="PBRT-V3" targetName="ContinuousBuild" />
+      <config projectName="PBRT-V3" targetName="NightlyMemoryCheck" />
+      <config projectName="PBRT-V3" targetName="NightlyStart" />
+      <config projectName="PBRT-V3" targetName="wtest" />
+      <config projectName="PBRT-V3" targetName="ContinuousConfigure" />
+    </generated>
+  </component>
+  <component name="CMakeSettings">
+    <configurations>
+      <configuration CONFIG_NAME="Debug" />
+    </configurations>
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="0e1986e9-e618-4f0d-a824-8b6763a0fbf0" name="Default" comment="">
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/films/multichannel.cpp" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/films/multichannel.h" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/core/film.h" afterPath="$PROJECT_DIR$/src/core/film.h" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/core/geometry.h" afterPath="$PROJECT_DIR$/src/core/geometry.h" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/core/integrator.cpp" afterPath="$PROJECT_DIR$/src/core/integrator.cpp" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/core/scene.cpp" afterPath="$PROJECT_DIR$/src/core/scene.cpp" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/integrators/bdpt.cpp" afterPath="$PROJECT_DIR$/src/integrators/bdpt.cpp" />
+    </list>
+    <ignored path="$PROJECT_DIR$/cmake-build-debug/" />
+    <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
+    <option name="TRACKING_ENABLED" value="true" />
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileColors">
+    <fileColor scope="Non-Project Files (Material Default)" color="415967" />
+    <fileColor scope="Non-Project Files (Material Darker)" color="474747" />
+    <fileColor scope="Non-Project Files (Material Lighter)" color="D2D4D5" />
+    <fileColor scope="Non-Project Files (Material Palenight)" color="4E5579" />
+    <fileColor scope="Non-Project Files (Material Default)" color="2E3C43" />
+    <fileColor scope="Non-Project Files (Material Darker)" color="323232" />
+    <fileColor scope="Non-Project Files (Material Lighter)" color="eae8e8" />
+    <fileColor scope="Non-Project Files (Material Palenight)" color="2f2e43" />
+  </component>
+  <component name="FileEditorManager">
+    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
+      <file leaf-file-name="api.cpp" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/core/api.cpp">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="382">
+              <caret line="731" column="20" lean-forward="true" selection-start-line="731" selection-start-column="15" selection-end-line="731" selection-end-column="25" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="film.cpp" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/core/film.cpp">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="288">
+              <caret line="94" column="34" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="251" selection-end-column="0" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="film.h" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/core/film.h">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="396">
+              <caret line="130" column="43" lean-forward="true" selection-start-line="0" selection-start-column="0" selection-end-line="239" selection-end-column="0" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="multichannel.cpp" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/films/multichannel.cpp">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="-934">
+              <caret line="29" column="0" lean-forward="true" selection-start-line="29" selection-start-column="0" selection-end-line="29" selection-end-column="0" />
+              <folding>
+                <element signature="e#1495#1520#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="multichannel.h" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/films/multichannel.h">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="217">
+              <caret line="96" column="31" lean-forward="true" selection-start-line="96" selection-start-column="31" selection-end-line="96" selection-end-column="31" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="integrator.cpp" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/core/integrator.cpp">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="-2268">
+              <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="geometry.cpp" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/core/geometry.cpp">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="0">
+              <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="geometry.h" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/core/geometry.h">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="242">
+              <caret line="889" column="0" lean-forward="true" selection-start-line="889" selection-start-column="0" selection-end-line="889" selection-end-column="0" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="scene.cpp" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/core/scene.cpp">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="306">
+              <caret line="53" column="43" lean-forward="true" selection-start-line="53" selection-start-column="43" selection-end-line="53" selection-end-column="43" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="primitive.h" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/core/primitive.h">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="-1598">
+              <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+    </leaf>
+  </component>
+  <component name="FindInProjectRecents">
+    <findStrings>
+      <find>toply</find>
+      <find>Ray</find>
+    </findStrings>
+    <dirStrings>
+      <dir>$PROJECT_DIR$/src/</dir>
+      <dir>$PROJECT_DIR$/src</dir>
+    </dirStrings>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="IdeDocumentHistory">
+    <option name="CHANGED_PATHS">
+      <list>
+        <option value="$PROJECT_DIR$/src/core/geometry.h" />
+        <option value="$PROJECT_DIR$/src/core/scene.cpp" />
+        <option value="$PROJECT_DIR$/src/core/film.h" />
+        <option value="$PROJECT_DIR$/src/films/multichannel.h" />
+        <option value="$PROJECT_DIR$/src/films/multichannel.cpp" />
+      </list>
+    </option>
+  </component>
+  <component name="JsBuildToolGruntFileManager" detection-done="true" sorting="DEFINITION_ORDER" />
+  <component name="JsBuildToolPackageJson" detection-done="true" sorting="DEFINITION_ORDER" />
+  <component name="JsGulpfileManager">
+    <detection-done>true</detection-done>
+    <sorting>DEFINITION_ORDER</sorting>
+  </component>
+  <component name="ProjectFrameBounds">
+    <option name="x" value="1145" />
+    <option name="y" value="439" />
+    <option name="width" value="1973" />
+    <option name="height" value="1032" />
+  </component>
+  <component name="ProjectView">
+    <navigator currentView="ProjectPane" proportions="" version="1">
+      <flattenPackages />
+      <showMembers />
+      <showModules />
+      <showLibraryContents />
+      <hideEmptyPackages />
+      <abbreviatePackageNames />
+      <autoscrollToSource />
+      <autoscrollFromSource />
+      <sortByType />
+      <manualOrder />
+      <foldersAlwaysOnTop value="true" />
+    </navigator>
+    <panes>
+      <pane id="ProjectPane">
+        <subPane>
+          <expand>
+            <path>
+              <item name="PBRT-V3" type="dad4c3:CidrFilesViewHelper$MyProjectTreeStructure$1" />
+              <item name="pbrt-v3" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="PBRT-V3" type="dad4c3:CidrFilesViewHelper$MyProjectTreeStructure$1" />
+              <item name="pbrt-v3" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="PBRT-V3" type="dad4c3:CidrFilesViewHelper$MyProjectTreeStructure$1" />
+              <item name="pbrt-v3" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="films" type="462c0819:PsiDirectoryNode" />
+            </path>
+          </expand>
+          <select />
+        </subPane>
+      </pane>
+    </panes>
+  </component>
+  <component name="PropertiesComponent">
+    <property name="WebServerToolWindowFactoryState" value="false" />
+  </component>
+  <component name="RunDashboard">
+    <option name="ruleStates">
+      <list>
+        <RuleState>
+          <option name="name" value="ConfigurationTypeDashboardGroupingRule" />
+        </RuleState>
+        <RuleState>
+          <option name="name" value="StatusDashboardGroupingRule" />
+        </RuleState>
+      </list>
+    </option>
+  </component>
+  <component name="RunManager" selected="Application.bsdftest">
+    <configuration name="Build All" type="CMakeRunConfiguration" factoryName="Application" PASS_PARENT_ENVS_2="true" CONFIG_NAME="Debug" EXPLICIT_BUILD_TARGET_NAME="all">
+      <envs />
+    </configuration>
+    <configuration name="Continuous" type="CMakeRunConfiguration" factoryName="Application" PASS_PARENT_ENVS_2="true" PROJECT_NAME="PBRT-V3" TARGET_NAME="Continuous" CONFIG_NAME="Debug">
+      <envs />
+    </configuration>
+    <configuration name="ContinuousBuild" type="CMakeRunConfiguration" factoryName="Application" PASS_PARENT_ENVS_2="true" PROJECT_NAME="PBRT-V3" TARGET_NAME="ContinuousBuild" CONFIG_NAME="Debug" RUN_TARGET_PROJECT_NAME="PBRT-V3" RUN_TARGET_NAME="ContinuousBuild">
+      <envs />
+    </configuration>
+    <configuration name="ContinuousConfigure" type="CMakeRunConfiguration" factoryName="Application" PASS_PARENT_ENVS_2="true" PROJECT_NAME="PBRT-V3" TARGET_NAME="ContinuousConfigure" CONFIG_NAME="Debug" RUN_TARGET_PROJECT_NAME="PBRT-V3" RUN_TARGET_NAME="ContinuousConfigure">
+      <envs />
+    </configuration>
+    <configuration name="ContinuousCoverage" type="CMakeRunConfiguration" factoryName="Application" PASS_PARENT_ENVS_2="true" PROJECT_NAME="PBRT-V3" TARGET_NAME="ContinuousCoverage" CONFIG_NAME="Debug" RUN_TARGET_PROJECT_NAME="PBRT-V3" RUN_TARGET_NAME="ContinuousCoverage">
+      <envs />
+    </configuration>
+    <configuration name="ContinuousMemCheck" type="CMakeRunConfiguration" factoryName="Application" PASS_PARENT_ENVS_2="true" PROJECT_NAME="PBRT-V3" TARGET_NAME="ContinuousMemCheck" CONFIG_NAME="Debug" RUN_TARGET_PROJECT_NAME="PBRT-V3" RUN_TARGET_NAME="ContinuousMemCheck">
+      <envs />
+    </configuration>
+    <configuration name="ContinuousStart" type="CMakeRunConfiguration" factoryName="Application" PASS_PARENT_ENVS_2="true" PROJECT_NAME="PBRT-V3" TARGET_NAME="ContinuousStart" CONFIG_NAME="Debug" RUN_TARGET_PROJECT_NAME="PBRT-V3" RUN_TARGET_NAME="ContinuousStart">
+      <envs />
+    </configuration>
+    <configuration name="ContinuousSubmit" type="CMakeRunConfiguration" factoryName="Application" PASS_PARENT_ENVS_2="true" PROJECT_NAME="PBRT-V3" TARGET_NAME="ContinuousSubmit" CONFIG_NAME="Debug" RUN_TARGET_PROJECT_NAME="PBRT-V3" RUN_TARGET_NAME="ContinuousSubmit">
+      <envs />
+    </configuration>
+    <configuration name="ContinuousTest" type="CMakeRunConfiguration" factoryName="Application" PASS_PARENT_ENVS_2="true" PROJECT_NAME="PBRT-V3" TARGET_NAME="ContinuousTest" CONFIG_NAME="Debug" RUN_TARGET_PROJECT_NAME="PBRT-V3" RUN_TARGET_NAME="ContinuousTest">
+      <envs />
+    </configuration>
+    <configuration name="ContinuousUpdate" type="CMakeRunConfiguration" factoryName="Application" PASS_PARENT_ENVS_2="true" PROJECT_NAME="PBRT-V3" TARGET_NAME="ContinuousUpdate" CONFIG_NAME="Debug" RUN_TARGET_PROJECT_NAME="PBRT-V3" RUN_TARGET_NAME="ContinuousUpdate">
+      <envs />
+    </configuration>
+    <configuration name="CopyIlmBaseLibs" type="CMakeRunConfiguration" factoryName="Application" PASS_PARENT_ENVS_2="true" PROJECT_NAME="PBRT-V3" TARGET_NAME="CopyIlmBaseLibs" CONFIG_NAME="Debug">
+      <envs />
+    </configuration>
+    <configuration name="Experimental" type="CMakeRunConfiguration" factoryName="Application" PASS_PARENT_ENVS_2="true" PROJECT_NAME="PBRT-V3" TARGET_NAME="Experimental" CONFIG_NAME="Debug">
+      <envs />
+    </configuration>
+    <configuration name="ExperimentalBuild" type="CMakeRunConfiguration" factoryName="Application" PASS_PARENT_ENVS_2="true" PROJECT_NAME="PBRT-V3" TARGET_NAME="ExperimentalBuild" CONFIG_NAME="Debug" RUN_TARGET_PROJECT_NAME="PBRT-V3" RUN_TARGET_NAME="ExperimentalBuild">
+      <envs />
+    </configuration>
+    <configuration name="ExperimentalConfigure" type="CMakeRunConfiguration" factoryName="Application" PASS_PARENT_ENVS_2="true" PROJECT_NAME="PBRT-V3" TARGET_NAME="ExperimentalConfigure" CONFIG_NAME="Debug" RUN_TARGET_PROJECT_NAME="PBRT-V3" RUN_TARGET_NAME="ExperimentalConfigure">
+      <envs />
+    </configuration>
+    <configuration name="ExperimentalCoverage" type="CMakeRunConfiguration" factoryName="Application" PASS_PARENT_ENVS_2="true" PROJECT_NAME="PBRT-V3" TARGET_NAME="ExperimentalCoverage" CONFIG_NAME="Debug" RUN_TARGET_PROJECT_NAME="PBRT-V3" RUN_TARGET_NAME="ExperimentalCoverage">
+      <envs />
+    </configuration>
+    <configuration name="ExperimentalMemCheck" type="CMakeRunConfiguration" factoryName="Application" PASS_PARENT_ENVS_2="true" PROJECT_NAME="PBRT-V3" TARGET_NAME="ExperimentalMemCheck" CONFIG_NAME="Debug" RUN_TARGET_PROJECT_NAME="PBRT-V3" RUN_TARGET_NAME="ExperimentalMemCheck">
+      <envs />
+    </configuration>
+    <configuration name="ExperimentalStart" type="CMakeRunConfiguration" factoryName="Application" PASS_PARENT_ENVS_2="true" PROJECT_NAME="PBRT-V3" TARGET_NAME="ExperimentalStart" CONFIG_NAME="Debug" RUN_TARGET_PROJECT_NAME="PBRT-V3" RUN_TARGET_NAME="ExperimentalStart">
+      <envs />
+    </configuration>
+    <configuration name="ExperimentalSubmit" type="CMakeRunConfiguration" factoryName="Application" PASS_PARENT_ENVS_2="true" PROJECT_NAME="PBRT-V3" TARGET_NAME="ExperimentalSubmit" CONFIG_NAME="Debug" RUN_TARGET_PROJECT_NAME="PBRT-V3" RUN_TARGET_NAME="ExperimentalSubmit">
+      <envs />
+    </configuration>
+    <configuration name="ExperimentalTest" type="CMakeRunConfiguration" factoryName="Application" PASS_PARENT_ENVS_2="true" PROJECT_NAME="PBRT-V3" TARGET_NAME="ExperimentalTest" CONFIG_NAME="Debug" RUN_TARGET_PROJECT_NAME="PBRT-V3" RUN_TARGET_NAME="ExperimentalTest">
+      <envs />
+    </configuration>
+    <configuration name="ExperimentalUpdate" type="CMakeRunConfiguration" factoryName="Application" PASS_PARENT_ENVS_2="true" PROJECT_NAME="PBRT-V3" TARGET_NAME="ExperimentalUpdate" CONFIG_NAME="Debug" RUN_TARGET_PROJECT_NAME="PBRT-V3" RUN_TARGET_NAME="ExperimentalUpdate">
+      <envs />
+    </configuration>
+    <configuration name="Half" type="CMakeRunConfiguration" factoryName="Application" PASS_PARENT_ENVS_2="true" PROJECT_NAME="PBRT-V3" TARGET_NAME="Half" CONFIG_NAME="Debug">
+      <envs />
+    </configuration>
+    <configuration name="Iex" type="CMakeRunConfiguration" factoryName="Application" PASS_PARENT_ENVS_2="true" PROJECT_NAME="PBRT-V3" TARGET_NAME="Iex" CONFIG_NAME="Debug">
+      <envs />
+    </configuration>
+    <configuration name="IexMath" type="CMakeRunConfiguration" factoryName="Application" PASS_PARENT_ENVS_2="true" PROJECT_NAME="PBRT-V3" TARGET_NAME="IexMath" CONFIG_NAME="Debug">
+      <envs />
+    </configuration>
+    <configuration name="IlmImf" type="CMakeRunConfiguration" factoryName="Application" PASS_PARENT_ENVS_2="true" PROJECT_NAME="PBRT-V3" TARGET_NAME="IlmImf" CONFIG_NAME="Debug">
+      <envs />
+    </configuration>
+    <configuration name="IlmThread" type="CMakeRunConfiguration" factoryName="Application" PASS_PARENT_ENVS_2="true" PROJECT_NAME="PBRT-V3" TARGET_NAME="IlmThread" CONFIG_NAME="Debug">
+      <envs />
+    </configuration>
+    <configuration name="Imath" type="CMakeRunConfiguration" factoryName="Application" PASS_PARENT_ENVS_2="true" PROJECT_NAME="PBRT-V3" TARGET_NAME="Imath" CONFIG_NAME="Debug">
+      <envs />
+    </configuration>
+    <configuration name="Nightly" type="CMakeRunConfiguration" factoryName="Application" PASS_PARENT_ENVS_2="true" PROJECT_NAME="PBRT-V3" TARGET_NAME="Nightly" CONFIG_NAME="Debug">
+      <envs />
+    </configuration>
+    <configuration name="NightlyBuild" type="CMakeRunConfiguration" factoryName="Application" PASS_PARENT_ENVS_2="true" PROJECT_NAME="PBRT-V3" TARGET_NAME="NightlyBuild" CONFIG_NAME="Debug" RUN_TARGET_PROJECT_NAME="PBRT-V3" RUN_TARGET_NAME="NightlyBuild">
+      <envs />
+    </configuration>
+    <configuration name="NightlyConfigure" type="CMakeRunConfiguration" factoryName="Application" PASS_PARENT_ENVS_2="true" PROJECT_NAME="PBRT-V3" TARGET_NAME="NightlyConfigure" CONFIG_NAME="Debug" RUN_TARGET_PROJECT_NAME="PBRT-V3" RUN_TARGET_NAME="NightlyConfigure">
+      <envs />
+    </configuration>
+    <configuration name="NightlyCoverage" type="CMakeRunConfiguration" factoryName="Application" PASS_PARENT_ENVS_2="true" PROJECT_NAME="PBRT-V3" TARGET_NAME="NightlyCoverage" CONFIG_NAME="Debug" RUN_TARGET_PROJECT_NAME="PBRT-V3" RUN_TARGET_NAME="NightlyCoverage">
+      <envs />
+    </configuration>
+    <configuration name="NightlyMemCheck" type="CMakeRunConfiguration" factoryName="Application" PASS_PARENT_ENVS_2="true" PROJECT_NAME="PBRT-V3" TARGET_NAME="NightlyMemCheck" CONFIG_NAME="Debug" RUN_TARGET_PROJECT_NAME="PBRT-V3" RUN_TARGET_NAME="NightlyMemCheck">
+      <envs />
+    </configuration>
+    <configuration name="NightlyMemoryCheck" type="CMakeRunConfiguration" factoryName="Application" PASS_PARENT_ENVS_2="true" PROJECT_NAME="PBRT-V3" TARGET_NAME="NightlyMemoryCheck" CONFIG_NAME="Debug" RUN_TARGET_PROJECT_NAME="PBRT-V3" RUN_TARGET_NAME="NightlyMemoryCheck">
+      <envs />
+    </configuration>
+    <configuration name="NightlyStart" type="CMakeRunConfiguration" factoryName="Application" PASS_PARENT_ENVS_2="true" PROJECT_NAME="PBRT-V3" TARGET_NAME="NightlyStart" CONFIG_NAME="Debug" RUN_TARGET_PROJECT_NAME="PBRT-V3" RUN_TARGET_NAME="NightlyStart">
+      <envs />
+    </configuration>
+    <configuration name="NightlySubmit" type="CMakeRunConfiguration" factoryName="Application" PASS_PARENT_ENVS_2="true" PROJECT_NAME="PBRT-V3" TARGET_NAME="NightlySubmit" CONFIG_NAME="Debug" RUN_TARGET_PROJECT_NAME="PBRT-V3" RUN_TARGET_NAME="NightlySubmit">
+      <envs />
+    </configuration>
+    <configuration name="NightlyTest" type="CMakeRunConfiguration" factoryName="Application" PASS_PARENT_ENVS_2="true" PROJECT_NAME="PBRT-V3" TARGET_NAME="NightlyTest" CONFIG_NAME="Debug" RUN_TARGET_PROJECT_NAME="PBRT-V3" RUN_TARGET_NAME="NightlyTest">
+      <envs />
+    </configuration>
+    <configuration name="NightlyUpdate" type="CMakeRunConfiguration" factoryName="Application" PASS_PARENT_ENVS_2="true" PROJECT_NAME="PBRT-V3" TARGET_NAME="NightlyUpdate" CONFIG_NAME="Debug" RUN_TARGET_PROJECT_NAME="PBRT-V3" RUN_TARGET_NAME="NightlyUpdate">
+      <envs />
+    </configuration>
+    <configuration name="Ptex_dynamic" type="CMakeRunConfiguration" factoryName="Application" PASS_PARENT_ENVS_2="true" PROJECT_NAME="PBRT-V3" TARGET_NAME="Ptex_dynamic" CONFIG_NAME="Debug">
+      <envs />
+    </configuration>
+    <configuration name="Ptex_static" type="CMakeRunConfiguration" factoryName="Application" PASS_PARENT_ENVS_2="true" PROJECT_NAME="PBRT-V3" TARGET_NAME="Ptex_static" CONFIG_NAME="Debug">
+      <envs />
+    </configuration>
+    <configuration name="b44ExpLogTable" type="CMakeRunConfiguration" factoryName="Application" PASS_PARENT_ENVS_2="true" PROJECT_NAME="PBRT-V3" TARGET_NAME="b44ExpLogTable" CONFIG_NAME="Debug" RUN_TARGET_PROJECT_NAME="PBRT-V3" RUN_TARGET_NAME="b44ExpLogTable">
+      <envs />
+    </configuration>
+    <configuration name="bsdftest" type="CMakeRunConfiguration" factoryName="Application" PASS_PARENT_ENVS_2="true" PROJECT_NAME="PBRT-V3" TARGET_NAME="bsdftest" CONFIG_NAME="Debug" RUN_TARGET_PROJECT_NAME="PBRT-V3" RUN_TARGET_NAME="bsdftest">
+      <envs />
+    </configuration>
+    <configuration name="cyhair2pbrt" type="CMakeRunConfiguration" factoryName="Application" PASS_PARENT_ENVS_2="true" PROJECT_NAME="PBRT-V3" TARGET_NAME="cyhair2pbrt" CONFIG_NAME="Debug" RUN_TARGET_PROJECT_NAME="PBRT-V3" RUN_TARGET_NAME="cyhair2pbrt">
+      <envs />
+    </configuration>
+    <configuration name="demangle_unittest" type="CMakeRunConfiguration" factoryName="Application" PASS_PARENT_ENVS_2="true" PROJECT_NAME="PBRT-V3" TARGET_NAME="demangle_unittest" CONFIG_NAME="Debug" RUN_TARGET_PROJECT_NAME="PBRT-V3" RUN_TARGET_NAME="demangle_unittest">
+      <envs />
+    </configuration>
+    <configuration name="doc" type="CMakeRunConfiguration" factoryName="Application" PASS_PARENT_ENVS_2="true" PROJECT_NAME="PBRT-V3" TARGET_NAME="doc" CONFIG_NAME="Debug">
+      <envs />
+    </configuration>
+    <configuration name="doxygen" type="CMakeRunConfiguration" factoryName="Application" PASS_PARENT_ENVS_2="true" PROJECT_NAME="PBRT-V3" TARGET_NAME="doxygen" CONFIG_NAME="Debug">
+      <envs />
+    </configuration>
+    <configuration name="dwaLookups" type="CMakeRunConfiguration" factoryName="Application" PASS_PARENT_ENVS_2="true" PROJECT_NAME="PBRT-V3" TARGET_NAME="dwaLookups" CONFIG_NAME="Debug" RUN_TARGET_PROJECT_NAME="PBRT-V3" RUN_TARGET_NAME="dwaLookups">
+      <envs />
+    </configuration>
+    <configuration name="eLut" type="CMakeRunConfiguration" factoryName="Application" PASS_PARENT_ENVS_2="true" PROJECT_NAME="PBRT-V3" TARGET_NAME="eLut" CONFIG_NAME="Debug" RUN_TARGET_PROJECT_NAME="PBRT-V3" RUN_TARGET_NAME="eLut">
+      <envs />
+    </configuration>
+    <configuration name="ftest" type="CMakeRunConfiguration" factoryName="Application" PASS_PARENT_ENVS_2="true" PROJECT_NAME="PBRT-V3" TARGET_NAME="ftest" CONFIG_NAME="Debug" RUN_TARGET_PROJECT_NAME="PBRT-V3" RUN_TARGET_NAME="ftest">
+      <envs />
+    </configuration>
+    <configuration name="glog" type="CMakeRunConfiguration" factoryName="Application" PASS_PARENT_ENVS_2="true" PROJECT_NAME="PBRT-V3" TARGET_NAME="glog" CONFIG_NAME="Debug">
+      <envs />
+    </configuration>
+    <configuration name="halftest" type="CMakeRunConfiguration" factoryName="Application" PASS_PARENT_ENVS_2="true" PROJECT_NAME="PBRT-V3" TARGET_NAME="halftest" CONFIG_NAME="Debug" RUN_TARGET_PROJECT_NAME="PBRT-V3" RUN_TARGET_NAME="halftest">
+      <envs />
+    </configuration>
+    <configuration name="imgtool" type="CMakeRunConfiguration" factoryName="Application" PASS_PARENT_ENVS_2="true" PROJECT_NAME="PBRT-V3" TARGET_NAME="imgtool" CONFIG_NAME="Debug" RUN_TARGET_PROJECT_NAME="PBRT-V3" RUN_TARGET_NAME="imgtool">
+      <envs />
+    </configuration>
+    <configuration name="logging_unittest" type="CMakeRunConfiguration" factoryName="Application" PASS_PARENT_ENVS_2="true" PROJECT_NAME="PBRT-V3" TARGET_NAME="logging_unittest" CONFIG_NAME="Debug" RUN_TARGET_PROJECT_NAME="PBRT-V3" RUN_TARGET_NAME="logging_unittest">
+      <envs />
+    </configuration>
+    <configuration name="obj2pbrt" type="CMakeRunConfiguration" factoryName="Application" PASS_PARENT_ENVS_2="true" PROJECT_NAME="PBRT-V3" TARGET_NAME="obj2pbrt" CONFIG_NAME="Debug" RUN_TARGET_PROJECT_NAME="PBRT-V3" RUN_TARGET_NAME="obj2pbrt">
+      <envs />
+    </configuration>
+    <configuration name="pbrt" type="CMakeRunConfiguration" factoryName="Application" PASS_PARENT_ENVS_2="true" PROJECT_NAME="PBRT-V3" TARGET_NAME="pbrt" CONFIG_NAME="Debug">
+      <envs />
+    </configuration>
+    <configuration name="pbrt_exe" type="CMakeRunConfiguration" factoryName="Application" PASS_PARENT_ENVS_2="true" PROJECT_NAME="PBRT-V3" TARGET_NAME="pbrt_exe" CONFIG_NAME="Debug" RUN_TARGET_PROJECT_NAME="PBRT-V3" RUN_TARGET_NAME="pbrt_exe">
+      <envs />
+    </configuration>
+    <configuration name="pbrt_test" type="CMakeRunConfiguration" factoryName="Application" PASS_PARENT_ENVS_2="true" PROJECT_NAME="PBRT-V3" TARGET_NAME="pbrt_test" CONFIG_NAME="Debug" RUN_TARGET_PROJECT_NAME="PBRT-V3" RUN_TARGET_NAME="pbrt_test">
+      <envs />
+    </configuration>
+    <configuration name="ptxinfo" type="CMakeRunConfiguration" factoryName="Application" PASS_PARENT_ENVS_2="true" PROJECT_NAME="PBRT-V3" TARGET_NAME="ptxinfo" CONFIG_NAME="Debug" RUN_TARGET_PROJECT_NAME="PBRT-V3" RUN_TARGET_NAME="ptxinfo">
+      <envs />
+    </configuration>
+    <configuration name="rtest" type="CMakeRunConfiguration" factoryName="Application" PASS_PARENT_ENVS_2="true" PROJECT_NAME="PBRT-V3" TARGET_NAME="rtest" CONFIG_NAME="Debug" RUN_TARGET_PROJECT_NAME="PBRT-V3" RUN_TARGET_NAME="rtest">
+      <envs />
+    </configuration>
+    <configuration name="signalhandler_unittest" type="CMakeRunConfiguration" factoryName="Application" PASS_PARENT_ENVS_2="true" PROJECT_NAME="PBRT-V3" TARGET_NAME="signalhandler_unittest" CONFIG_NAME="Debug" RUN_TARGET_PROJECT_NAME="PBRT-V3" RUN_TARGET_NAME="signalhandler_unittest">
+      <envs />
+    </configuration>
+    <configuration name="stacktrace_unittest" type="CMakeRunConfiguration" factoryName="Application" PASS_PARENT_ENVS_2="true" PROJECT_NAME="PBRT-V3" TARGET_NAME="stacktrace_unittest" CONFIG_NAME="Debug" RUN_TARGET_PROJECT_NAME="PBRT-V3" RUN_TARGET_NAME="stacktrace_unittest">
+      <envs />
+    </configuration>
+    <configuration name="stl_logging_unittest" type="CMakeRunConfiguration" factoryName="Application" PASS_PARENT_ENVS_2="true" PROJECT_NAME="PBRT-V3" TARGET_NAME="stl_logging_unittest" CONFIG_NAME="Debug" RUN_TARGET_PROJECT_NAME="PBRT-V3" RUN_TARGET_NAME="stl_logging_unittest">
+      <envs />
+    </configuration>
+    <configuration name="symbolize_unittest" type="CMakeRunConfiguration" factoryName="Application" PASS_PARENT_ENVS_2="true" PROJECT_NAME="PBRT-V3" TARGET_NAME="symbolize_unittest" CONFIG_NAME="Debug" RUN_TARGET_PROJECT_NAME="PBRT-V3" RUN_TARGET_NAME="symbolize_unittest">
+      <envs />
+    </configuration>
+    <configuration name="toFloat" type="CMakeRunConfiguration" factoryName="Application" PASS_PARENT_ENVS_2="true" PROJECT_NAME="PBRT-V3" TARGET_NAME="toFloat" CONFIG_NAME="Debug" RUN_TARGET_PROJECT_NAME="PBRT-V3" RUN_TARGET_NAME="toFloat">
+      <envs />
+    </configuration>
+    <configuration name="utilities_unittest" type="CMakeRunConfiguration" factoryName="Application" PASS_PARENT_ENVS_2="true" PROJECT_NAME="PBRT-V3" TARGET_NAME="utilities_unittest" CONFIG_NAME="Debug" RUN_TARGET_PROJECT_NAME="PBRT-V3" RUN_TARGET_NAME="utilities_unittest">
+      <envs />
+    </configuration>
+    <configuration name="wtest" type="CMakeRunConfiguration" factoryName="Application" PASS_PARENT_ENVS_2="true" PROJECT_NAME="PBRT-V3" TARGET_NAME="wtest" CONFIG_NAME="Debug" RUN_TARGET_PROJECT_NAME="PBRT-V3" RUN_TARGET_NAME="wtest">
+      <envs />
+    </configuration>
+    <list size="64">
+      <item index="0" class="java.lang.String" itemvalue="Application.Build All" />
+      <item index="1" class="java.lang.String" itemvalue="Application.bsdftest" />
+      <item index="2" class="java.lang.String" itemvalue="Application.cyhair2pbrt" />
+      <item index="3" class="java.lang.String" itemvalue="Application.imgtool" />
+      <item index="4" class="java.lang.String" itemvalue="Application.obj2pbrt" />
+      <item index="5" class="java.lang.String" itemvalue="Application.pbrt" />
+      <item index="6" class="java.lang.String" itemvalue="Application.pbrt_exe" />
+      <item index="7" class="java.lang.String" itemvalue="Application.pbrt_test" />
+      <item index="8" class="java.lang.String" itemvalue="Application.demangle_unittest" />
+      <item index="9" class="java.lang.String" itemvalue="Application.glog" />
+      <item index="10" class="java.lang.String" itemvalue="Application.logging_unittest" />
+      <item index="11" class="java.lang.String" itemvalue="Application.signalhandler_unittest" />
+      <item index="12" class="java.lang.String" itemvalue="Application.stacktrace_unittest" />
+      <item index="13" class="java.lang.String" itemvalue="Application.stl_logging_unittest" />
+      <item index="14" class="java.lang.String" itemvalue="Application.symbolize_unittest" />
+      <item index="15" class="java.lang.String" itemvalue="Application.utilities_unittest" />
+      <item index="16" class="java.lang.String" itemvalue="Application.CopyIlmBaseLibs" />
+      <item index="17" class="java.lang.String" itemvalue="Application.eLut" />
+      <item index="18" class="java.lang.String" itemvalue="Application.Half" />
+      <item index="19" class="java.lang.String" itemvalue="Application.toFloat" />
+      <item index="20" class="java.lang.String" itemvalue="Application.Iex" />
+      <item index="21" class="java.lang.String" itemvalue="Application.IexMath" />
+      <item index="22" class="java.lang.String" itemvalue="Application.IlmThread" />
+      <item index="23" class="java.lang.String" itemvalue="Application.Imath" />
+      <item index="24" class="java.lang.String" itemvalue="Application.b44ExpLogTable" />
+      <item index="25" class="java.lang.String" itemvalue="Application.dwaLookups" />
+      <item index="26" class="java.lang.String" itemvalue="Application.IlmImf" />
+      <item index="27" class="java.lang.String" itemvalue="Application.Continuous" />
+      <item index="28" class="java.lang.String" itemvalue="Application.ContinuousBuild" />
+      <item index="29" class="java.lang.String" itemvalue="Application.ContinuousConfigure" />
+      <item index="30" class="java.lang.String" itemvalue="Application.ContinuousCoverage" />
+      <item index="31" class="java.lang.String" itemvalue="Application.ContinuousMemCheck" />
+      <item index="32" class="java.lang.String" itemvalue="Application.ContinuousStart" />
+      <item index="33" class="java.lang.String" itemvalue="Application.ContinuousSubmit" />
+      <item index="34" class="java.lang.String" itemvalue="Application.ContinuousTest" />
+      <item index="35" class="java.lang.String" itemvalue="Application.ContinuousUpdate" />
+      <item index="36" class="java.lang.String" itemvalue="Application.Experimental" />
+      <item index="37" class="java.lang.String" itemvalue="Application.ExperimentalBuild" />
+      <item index="38" class="java.lang.String" itemvalue="Application.ExperimentalConfigure" />
+      <item index="39" class="java.lang.String" itemvalue="Application.ExperimentalCoverage" />
+      <item index="40" class="java.lang.String" itemvalue="Application.ExperimentalMemCheck" />
+      <item index="41" class="java.lang.String" itemvalue="Application.ExperimentalStart" />
+      <item index="42" class="java.lang.String" itemvalue="Application.ExperimentalSubmit" />
+      <item index="43" class="java.lang.String" itemvalue="Application.ExperimentalTest" />
+      <item index="44" class="java.lang.String" itemvalue="Application.ExperimentalUpdate" />
+      <item index="45" class="java.lang.String" itemvalue="Application.Nightly" />
+      <item index="46" class="java.lang.String" itemvalue="Application.NightlyBuild" />
+      <item index="47" class="java.lang.String" itemvalue="Application.NightlyConfigure" />
+      <item index="48" class="java.lang.String" itemvalue="Application.NightlyCoverage" />
+      <item index="49" class="java.lang.String" itemvalue="Application.NightlyMemCheck" />
+      <item index="50" class="java.lang.String" itemvalue="Application.NightlyMemoryCheck" />
+      <item index="51" class="java.lang.String" itemvalue="Application.NightlyStart" />
+      <item index="52" class="java.lang.String" itemvalue="Application.NightlySubmit" />
+      <item index="53" class="java.lang.String" itemvalue="Application.NightlyTest" />
+      <item index="54" class="java.lang.String" itemvalue="Application.NightlyUpdate" />
+      <item index="55" class="java.lang.String" itemvalue="Application.doc" />
+      <item index="56" class="java.lang.String" itemvalue="Application.doxygen" />
+      <item index="57" class="java.lang.String" itemvalue="Application.Ptex_dynamic" />
+      <item index="58" class="java.lang.String" itemvalue="Application.Ptex_static" />
+      <item index="59" class="java.lang.String" itemvalue="Application.ftest" />
+      <item index="60" class="java.lang.String" itemvalue="Application.halftest" />
+      <item index="61" class="java.lang.String" itemvalue="Application.rtest" />
+      <item index="62" class="java.lang.String" itemvalue="Application.wtest" />
+      <item index="63" class="java.lang.String" itemvalue="Application.ptxinfo" />
+    </list>
+  </component>
+  <component name="ShelveChangesManager" show_recycled="false">
+    <option name="remove_strategy" value="false" />
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="0e1986e9-e618-4f0d-a824-8b6763a0fbf0" name="Default" comment="" />
+      <created>1506981046169</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1506981046169</updated>
+      <workItem from="1506981047428" duration="258000" />
+      <workItem from="1506994012541" duration="629000" />
+      <workItem from="1507085627109" duration="3000" />
+      <workItem from="1507564302920" duration="1044000" />
+      <workItem from="1507774915036" duration="6212000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TimeTrackingManager">
+    <option name="totallyTimeSpent" value="8146000" />
+  </component>
+  <component name="ToolWindowManager">
+    <frame x="1145" y="439" width="1973" height="1032" extended-state="0" />
+    <editor active="true" />
+    <layout>
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.2498733" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
+      <window_info id="CMake" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
+      <window_info id="Data View" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
+      <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
+      <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
+      <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
+      <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+    </layout>
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="1" />
+  </component>
+  <component name="VcsContentAnnotationSettings">
+    <option name="myLimit" value="2678400000" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager />
+    <watches-manager />
+  </component>
+  <component name="editorHistoryManager">
+    <entry file="file://$PROJECT_DIR$/src/core/api.cpp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="5940">
+          <caret line="330" column="24" lean-forward="false" selection-start-line="330" selection-start-column="24" selection-end-line="330" selection-end-column="24" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/core/parser.cpp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/core/pbrt.h">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1602">
+          <caret line="89" column="0" lean-forward="false" selection-start-line="89" selection-start-column="0" selection-end-line="89" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/core/film.h">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/core/integrator.cpp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/core/geometry.cpp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/core/geometry.h">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/core/scene.cpp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/integrators/path.cpp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/core/api.cpp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="5940">
+          <caret line="330" column="24" lean-forward="false" selection-start-line="330" selection-start-column="24" selection-end-line="330" selection-end-column="24" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/core/parser.cpp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/core/pbrt.h">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1602">
+          <caret line="89" column="0" lean-forward="false" selection-start-line="89" selection-start-column="0" selection-end-line="89" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/core/api.cpp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="5940">
+          <caret line="330" column="24" lean-forward="false" selection-start-line="330" selection-start-column="24" selection-end-line="330" selection-end-column="24" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/core/parser.cpp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/core/pbrt.h">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1602">
+          <caret line="89" column="0" lean-forward="true" selection-start-line="89" selection-start-column="0" selection-end-line="89" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/core/api.cpp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/core/pbrtlex.ll">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="289">
+          <caret line="126" column="68" lean-forward="false" selection-start-line="126" selection-start-column="68" selection-end-line="126" selection-end-column="68" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/core/parser.cpp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/core/pbrt.h">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1602">
+          <caret line="89" column="0" lean-forward="false" selection-start-line="89" selection-start-column="0" selection-end-line="89" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/integrators/path.cpp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/core/geometry.cpp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/core/integrator.cpp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-2268">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/core/geometry.h">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="242">
+          <caret line="889" column="0" lean-forward="true" selection-start-line="889" selection-start-column="0" selection-end-line="889" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/core/primitive.h">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-1598">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/core/scene.cpp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="306">
+          <caret line="53" column="43" lean-forward="true" selection-start-line="53" selection-start-column="43" selection-end-line="53" selection-end-column="43" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/core/api.cpp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="382">
+          <caret line="731" column="20" lean-forward="true" selection-start-line="731" selection-start-column="15" selection-end-line="731" selection-end-column="25" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/core/film.h">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="396">
+          <caret line="130" column="43" lean-forward="true" selection-start-line="0" selection-start-column="0" selection-end-line="239" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/core/film.cpp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="288">
+          <caret line="94" column="34" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="251" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/films/multichannel.h">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="217">
+          <caret line="96" column="31" lean-forward="true" selection-start-line="96" selection-start-column="31" selection-end-line="96" selection-end-column="31" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/films/multichannel.cpp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-934">
+          <caret line="29" column="0" lean-forward="true" selection-start-line="29" selection-start-column="0" selection-end-line="29" selection-end-column="0" />
+          <folding>
+            <element signature="e#1495#1520#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+  </component>
+</project>

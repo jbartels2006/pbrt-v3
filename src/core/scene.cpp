@@ -50,6 +50,22 @@ STAT_COUNTER("Intersections/Shadow ray intersection tests", nShadowTests);
 bool Scene::Intersect(const Ray &ray, SurfaceInteraction *isect) const {
     ++nIntersectionTests;
     DCHECK_NE(ray.d, Vector3f(0,0,0));
+
+    //START: Added for multi-channel plugin
+    ray.n = isect->n; //normals of surface at point p
+    ray.uv = isect->uv; //point from the parameterization of the surface
+    ray.p = isect->p;  //point of ray intersection
+
+//    if(isect->primitive != NULL)
+//    {
+//        ray.id = isect->primitive->id;
+//    }
+//    else
+//    {
+//        ray.id = 0;
+//    }
+    //END: Added for multi-channel plugin
+
     return aggregate->Intersect(ray, isect);
 }
 

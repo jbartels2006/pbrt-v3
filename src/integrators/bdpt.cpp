@@ -419,7 +419,8 @@ void BDPTIntegrator::Render(const Scene &scene) {
                     }
                     VLOG(2) << "Add film sample pFilm: " << pFilm << ", L: " << L <<
                         ", (y: " << L.y() << ")";
-                    filmTile->AddSample(pFilm, L);
+                    // filmTile->AddSample(pFilm, L); //renamed the original film::AddSample function that doesn't accept a ray in to AddSampleNoRay (Joe B. 10/11/2017) 
+                    filmTile->AddSampleNoRay(pFilm, L);
                     arena.Reset();
                 } while (tileSampler->StartNextSample());
             }

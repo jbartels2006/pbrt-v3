@@ -887,6 +887,12 @@ class Ray {
     mutable Float tMax;
     Float time;
     const Medium *medium;
+
+    //Added for multi-channel plugin
+    mutable Point3f p; //point of ray intersection
+    mutable Normal3f n; //normals of surface at point p
+    mutable Point2f uv; //point from the parameterization of the surface
+
 };
 
 class RayDifferential : public Ray {

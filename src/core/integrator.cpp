@@ -317,7 +317,8 @@ void SamplerIntegrator::Render(const Scene &scene) {
                         ray << " -> L = " << L;
 
                     // Add camera ray's contribution to image
-                    filmTile->AddSample(cameraSample.pFilm, L, rayWeight);
+                    // filmTile->AddSample(cameraSample.pFilm, L, rayWeight); //changed by Joe B. 10/11/2017 --- added ray so we can output depth and other info
+                    filmTile->AddSample(cameraSample.pFilm, L, rayWeight, &ray);
 
                     // Free _MemoryArena_ memory from computing image sample
                     // value
