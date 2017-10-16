@@ -44,7 +44,7 @@ namespace pbrt {
 // Film Method Definitions
     MultichannelFilm::MultichannelFilm(const Point2i &resolution, const Bounds2f &cropWindow,
                std::unique_ptr<Filter> filt, Float diagonal,
-               const std::string &filename, Float scale, Float maxSampleLuminance)
+               const std::string &filename, Float scale, Float maxSampleLuminance, const std::string &channelnames, const std::string &renameas)
             : fullResolution(resolution),
               diagonal(diagonal * .001),
               filter(std::move(filt)),
@@ -77,92 +77,46 @@ namespace pbrt {
         }
     }
 
-    Bounds2i MultichannelFilm::GetSampleBounds() const {
-        Bounds2f floatBounds(Floor(Point2f(croppedPixelBounds.pMin) +
-                                   Vector2f(0.5f, 0.5f) - filter->radius),
-                             Ceil(Point2f(croppedPixelBounds.pMax) -
-                                  Vector2f(0.5f, 0.5f) + filter->radius));
-        return (Bounds2i)floatBounds;
+
+    // Look up the channel name and return the appropriate value.  If the channel name
+// is not found, we show a warning and quit.
+    float MultichannelFilm::ComputeVal(const std::string &channelname, const Ray &ray) const
+    {
+        std::string s = channelname;
+
+        transform (s.begin(), s.end(), s.begin(), tolower);
+        if (s == "z") return (float) ray.tMax;
+        if (s == "wx") return ray.p.x;
+        if (s == "wy") return ray.p.y;
+        if (s == "wz") return ray.p.z;
+        if (s == "nx") return ray.n.x;
+        if (s == "ny") return ray.n.y;
+        if (s == "nz") return ray.n.z;
+        if (s == "ou") return ray.uv.x;
+        if (s == "ov") return ray.uv.y;
+
+        // The specified channel does not exist.  Exit and show a warning.
+        std::cout << "\n";
+        Warning("Channel '%s' does not exist.  Exiting...", channelname.c_str());
+
+        exit(1);
     }
 
-    Bounds2f MultichannelFilm::GetPhysicalExtent() const {
-        Float aspect = (Float)fullResolution.y / (Float)fullResolution.x;
-        Float x = std::sqrt(diagonal * diagonal / (1 + aspect * aspect));
-        Float y = aspect * x;
-        return Bounds2f(Point2f(-x / 2, -y / 2), Point2f(x / 2, y / 2));
+    void MultichannelFilm::UpdateChannel(const string &channelname, int index, const RayDifferential &ray, int x, int y, float weight)
+    {
+        float val = ComputeVal(channelname, ray);
+
+        // We will arbitrarily choose the last sample that we looked at.  (Ideally we would
+        // keep a histogram of all values and choose the mode...)
+        (*nonRgbaChannelData)((x * numNonRgbaChannels) + (index), y) = val;
     }
 
-    std::unique_ptr<MultichannelFilmTile> MultichannelFilm::GetFilmTile(const Bounds2i &sampleBounds) {
-        // Bound image pixels that samples in _sampleBounds_ contribute to
-        Vector2f halfPixel = Vector2f(0.5f, 0.5f);
-        Bounds2f floatBounds = (Bounds2f)sampleBounds;
-        Point2i p0 = (Point2i)Ceil(floatBounds.pMin - halfPixel - filter->radius);
-        Point2i p1 = (Point2i)Floor(floatBounds.pMax - halfPixel + filter->radius) +
-                     Point2i(1, 1);
-        Bounds2i tilePixelBounds = Intersect(Bounds2i(p0, p1), croppedPixelBounds);
-        return std::unique_ptr<MultichannelFilmTile>(new MultichannelFilmTile(
-                tilePixelBounds, filter->radius, filterTable, filterTableWidth,
-                maxSampleLuminance));
-    }
 
-    void MultichannelFilm::Clear() {
-        for (Point2i p : croppedPixelBounds) {
-            Pixel &pixel = GetPixel(p);
-            for (int c = 0; c < 3; ++c)
-                pixel.splatXYZ[c] = pixel.xyz[c] = 0;
-            pixel.filterWeightSum = 0;
-        }
-    }
+    Imf::PixelType MultichannelFilm::GetVarType(const std::string &channelname)
+    {
+        if (channelname == "Z") return Imf::FLOAT;
 
-    void MultichannelFilm::MergeFilmTile(std::unique_ptr<MultichannelFilmTile> tile) {
-        ProfilePhase p(Prof::MergeFilmTile);
-        VLOG(1) << "Merging film tile " << tile->pixelBounds;
-        std::lock_guard<std::mutex> lock(mutex);
-        for (Point2i pixel : tile->GetPixelBounds()) {
-            // Merge _pixel_ into _Film::pixels_
-            const MultichannelFilmTilePixel &tilePixel = tile->GetPixel(pixel);
-            Pixel &mergePixel = GetPixel(pixel);
-            Float xyz[3];
-            tilePixel.contribSum.ToXYZ(xyz);
-            for (int i = 0; i < 3; ++i) mergePixel.xyz[i] += xyz[i];
-            mergePixel.filterWeightSum += tilePixel.filterWeightSum;
-        }
-    }
-
-    void MultichannelFilm::SetImage(const Spectrum *img) const {
-        int nPixels = croppedPixelBounds.Area();
-        for (int i = 0; i < nPixels; ++i) {
-            Pixel &p = pixels[i];
-            img[i].ToXYZ(p.xyz);
-            p.filterWeightSum = 1;
-            p.splatXYZ[0] = p.splatXYZ[1] = p.splatXYZ[2] = 0;
-        }
-    }
-
-    void MultichannelFilm::AddSplat(const Point2f &p, Spectrum v) {
-        ProfilePhase pp(Prof::SplatFilm);
-
-        if (v.HasNaNs()) {
-            LOG(ERROR) << StringPrintf("Ignoring splatted spectrum with NaN values "
-                                               "at (%f, %f)", p.x, p.y);
-            return;
-        } else if (v.y() < 0.) {
-            LOG(ERROR) << StringPrintf("Ignoring splatted spectrum with negative "
-                                               "luminance %f at (%f, %f)", v.y(), p.x, p.y);
-            return;
-        } else if (std::isinf(v.y())) {
-            LOG(ERROR) << StringPrintf("Ignoring splatted spectrum with infinite "
-                                               "luminance at (%f, %f)", p.x, p.y);
-            return;
-        }
-
-        if (!InsideExclusive((Point2i)p, croppedPixelBounds)) return;
-        if (v.y() > maxSampleLuminance)
-            v *= maxSampleLuminance / v.y();
-        Float xyz[3];
-        v.ToXYZ(xyz);
-        Pixel &pixel = GetPixel((Point2i)p);
-        for (int i = 0; i < 3; ++i) pixel.splatXYZ[i].Add(xyz[i]);
+        return Imf::HALF;
     }
 
     void MultichannelFilm::WriteImage(Float splatScale) {
@@ -201,12 +155,123 @@ namespace pbrt {
             rgb[3 * offset + 1] *= scale;
             rgb[3 * offset + 2] *= scale;
             ++offset;
+
+            //TODO: Add code to get multichannel stuff here?
+            // Also write non-RGBA channels
+            RayDifferential &ray = GetPixelRay(p);
+            for (int i = 0; i < numNonRgbaChannels; i++)
+            {
+                UpdateChannel(nonRgbaChannelNames[i], nonRgbaChannelIndex[i], ray, p.x, p.y, filterWt);
+            }
         }
 
         // Write RGB image
         LOG(INFO) << "Writing image " << filename << " with bounds " <<
                   croppedPixelBounds;
-        pbrt::WriteImage(filename, &rgb[0], croppedPixelBounds, fullResolution);
+        pbrt::WriteImage(filename, &rgb[0], croppedPixelBounds, fullResolution); //TODO: change to writeextendedchannel image
+    }
+
+    void MultichannelFilm::WriteExtendedChannelImage(const std::string &name, const std::vector<std::string> &channelnames,
+                                                        const std::vector<Imf::PixelType> &types, float *pixels,
+                                                        int xRes, int yRes,
+                                                        int totalXRes, int totalYRes,
+                                                        int xOffset, int yOffset)
+    {
+        Imf::Header header(totalXRes, totalYRes);
+        Box2i dataWindow(V2i(xOffset, yOffset), V2i(xOffset + xRes - 1, yOffset + yRes - 1));
+        header.dataWindow() = dataWindow;
+
+        int numchannels = channelnames.size();
+        for (int i = 0; i < numchannels; i++)
+        {
+            header.channels().insert(channelnames[i].c_str(), Imf::Channel (types[i]));
+        }
+
+        // Copy all data for each channel into a single array and then
+        // add that into the framebuffer
+        Imf::FrameBuffer fb;
+
+        half **hptrs = new half*[numchannels];
+        unsigned int **iptrs = new unsigned int *[numchannels];
+        float **fptrs = new float*[numchannels];
+
+        for (int i = 0; i < numchannels; i++)
+        {
+            hptrs[i] = NULL;
+            fptrs[i] = NULL;
+            iptrs[i] = NULL;
+        }
+
+        for (int i = 0; i < numchannels; i++)
+        {
+            if (types[i] == Imf::HALF)
+            {
+                half *h = new half[xRes * yRes];
+                hptrs[i] = h;
+
+                for (int j = 0; j < xRes * yRes; j++)
+                {
+                    h[j] = (half) pixels[j * numchannels + i];
+                }
+
+                h -= (xOffset + yOffset * xRes);
+
+                fb.insert(channelnames[i].c_str(), Imf::Slice(types[i], (char *)h, sizeof(half),
+                                                              xRes*sizeof(half)));
+
+            } else if ((types[i]) == Imf::FLOAT)
+            {
+                float *f = new float[xRes * yRes];
+                fptrs[i] = f;
+
+                for (int j = 0; j < xRes * yRes; j++)
+                {
+                    f[j] = pixels[j * numchannels + i];
+                }
+
+                f -= (xOffset + yOffset * xRes);
+
+                fb.insert(channelnames[i].c_str(), Imf::Slice(types[i], (char *)f, sizeof(float),
+                                                              xRes*sizeof(float)));
+
+            } else
+            {
+                unsigned int *ui = new unsigned int[xRes * yRes];
+                iptrs[i] = ui;
+
+                for (int j = 0; j < xRes * yRes; j++)
+                {
+                    ui[j] = (unsigned int) pixels[j * numchannels + i];
+                }
+
+                ui -= (xOffset + yOffset * xRes);
+
+                fb.insert(channelnames[i].c_str(), Imf::Slice(types[i], (char *)ui, sizeof(unsigned int),
+                                                              xRes*sizeof(unsigned int)));
+
+            }
+        }
+
+        Imf::OutputFile file(name.c_str(), header);
+
+        file.setFrameBuffer(fb);
+        try {
+            file.writePixels(yRes);
+        }
+        catch (const std::exception &e) {
+            Error("Unable to write image file \"%s\": %s", name.c_str(),
+                  e.what());
+        }
+        // Free the memory that was allocated for the slices
+        for (int i = 0; i < numchannels; i++)
+        {
+            delete[] fptrs[i];
+            delete[] iptrs[i];
+            delete[] hptrs[i];
+        }
+        delete[] fptrs;
+        delete[] iptrs;
+        delete[] hptrs;
     }
 
     MultichannelFilm *CreateFilm(const ParamSet &params, std::unique_ptr<Filter> filter) {
@@ -242,10 +307,13 @@ namespace pbrt {
 
         Float scale = params.FindOneFloat("scale", 1.);
         Float diagonal = params.FindOneFloat("diagonal", 35.);
-        Float maxSampleLuminance = params.FindOneFloat("maxsampleluminance",
-                                                       Infinity);
+        Float maxSampleLuminance = params.FindOneFloat("maxsampleluminance", Infinity);
+
+        std::string channelnames = params.FindOneString("channels", "R,G,B,A");
+        std::string renameas = params.FindOneString("renameas", channelnames);
+
         return new MultichannelFilm(Point2i(xres, yres), crop, std::move(filter), diagonal,
-                        filename, scale, maxSampleLuminance);
+                        filename, scale, maxSampleLuminance, channelnames, renameas);
     }
 
 }  // namespace pbrt

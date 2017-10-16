@@ -39,6 +39,7 @@
 #define PBRT_MULTICHANNEL_FILM_H
 
 // core/film.h*
+#include "film.h"
 #include "pbrt.h"
 #include "geometry.h"
 #include "spectrum.h"
@@ -61,7 +62,7 @@ namespace pbrt {
         MultichannelFilm(const Point2i &resolution, const Bounds2f &cropWindow,
              std::unique_ptr<Filter> filter, Float diagonal,
              const std::string &filename, Float scale,
-             Float maxSampleLuminance = Infinity, const string &channelnames, const string &renameas);
+             Float maxSampleLuminance = Infinity, const std::string &channelnames, const std::string &renameas);
 
         void WriteImage(Float splatScale = 1);
 
@@ -105,68 +106,6 @@ namespace pbrt {
                   maxSampleLuminance(maxSampleLuminance) {
             pixels = std::vector<MultichannelFilmTilePixel>(std::max(0, pixelBounds.Area()));
         }
-
-        //new AddSample function - added ray so we can output depth and other info,  changed by Joe B. 10/11/2017
-        void AddSample(const Point2f &pFilm, Spectrum L,
-                       Float sampleWeight = 1., RayDifferential *ray = nullptr) {
-            ProfilePhase _(Prof::AddFilmSample); //TODO: is this going to cause problems
-            if (L.y() > maxSampleLuminance)
-                L *= maxSampleLuminance / L.y();
-            // Compute sample's raster bounds
-            Point2f pFilmDiscrete = pFilm - Vector2f(0.5f, 0.5f);
-            Point2i p0 = (Point2i)Ceil(pFilmDiscrete - filterRadius);
-            Point2i p1 =
-                    (Point2i)Floor(pFilmDiscrete + filterRadius) + Point2i(1, 1);
-            p0 = Max(p0, pixelBounds.pMin);
-            p1 = Min(p1, pixelBounds.pMax);
-
-            // Loop over filter support and add sample to pixel arrays
-
-            // Precompute $x$ and $y$ filter table offsets
-            int *ifx = ALLOCA(int, p1.x - p0.x);
-            for (int x = p0.x; x < p1.x; ++x) {
-                Float fx = std::abs((x - pFilmDiscrete.x) * invFilterRadius.x *
-                                    filterTableSize);
-                ifx[x - p0.x] = std::min((int)std::floor(fx), filterTableSize - 1);
-            }
-            int *ify = ALLOCA(int, p1.y - p0.y);
-            for (int y = p0.y; y < p1.y; ++y) {
-                Float fy = std::abs((y - pFilmDiscrete.y) * invFilterRadius.y *
-                                    filterTableSize);
-                ify[y - p0.y] = std::min((int)std::floor(fy), filterTableSize - 1);
-            }
-            for (int y = p0.y; y < p1.y; ++y) {
-                for (int x = p0.x; x < p1.x; ++x) {
-                    // Evaluate filter value at $(x,y)$ pixel
-                    int offset = ify[y - p0.y] * filterTableSize + ifx[x - p0.x];
-                    Float filterWeight = filterTable[offset];
-
-                    // Update pixel values with filtered sample contribution
-                    MultichannelFilmTilePixel &pixel = GetPixel(Point2i(x, y));
-                    pixel.contribSum += L * sampleWeight * filterWeight;
-                    pixel.filterWeightSum += filterWeight;
-
-                    //
-                    //TODO:Add code here
-
-                }
-            }
-        }
-        MultichannelFilmTilePixel &GetPixel(const Point2i &p) {
-            CHECK(InsideExclusive(p, pixelBounds));
-            int width = pixelBounds.pMax.x - pixelBounds.pMin.x;
-            int offset =
-                    (p.x - pixelBounds.pMin.x) + (p.y - pixelBounds.pMin.y) * width;
-            return pixels[offset];
-        }
-        const MultichannelFilmTilePixel &GetPixel(const Point2i &p) const {
-            CHECK(InsideExclusive(p, pixelBounds));
-            int width = pixelBounds.pMax.x - pixelBounds.pMin.x;
-            int offset =
-                    (p.x - pixelBounds.pMin.x) + (p.y - pixelBounds.pMin.y) * width;
-            return pixels[offset];
-        }
-        Bounds2i GetPixelBounds() const { return pixelBounds; }
 
     private:
         // FilmTile Private Data

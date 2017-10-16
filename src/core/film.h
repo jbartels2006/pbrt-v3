@@ -79,7 +79,7 @@ class Film {
     const std::string filename;
     Bounds2i croppedPixelBounds;
 
-  private:
+  protected: //changed so derived class can access
     // Film Private Data
     struct Pixel {
         Pixel() { xyz[0] = xyz[1] = xyz[2] = filterWeightSum = 0; }
@@ -88,7 +88,9 @@ class Film {
         AtomicFloat splatXYZ[3];
         Float pad;
     };
+
     std::unique_ptr<Pixel[]> pixels;
+    std::unique_ptr<RayDifferential[]> rays; //added for multichannel, place to store ray info
     static PBRT_CONSTEXPR int filterTableWidth = 16;
     Float filterTable[filterTableWidth * filterTableWidth];
     std::mutex mutex;
@@ -104,13 +106,13 @@ class Film {
         return pixels[offset];
     }
 
-    //TODO: Fix this function to get ptr to place in vector of RayDifferentials for a pixel
+    //Added for Multichannel output
     RayDifferential &GetPixelRay(const Point2i &p) {
         CHECK(InsideExclusive(p, croppedPixelBounds));
         int width = croppedPixelBounds.pMax.x - croppedPixelBounds.pMin.x;
         int offset = (p.x - croppedPixelBounds.pMin.x) +
                      (p.y - croppedPixelBounds.pMin.y) * width;
-        return pixels[offset];
+        return rays[offset];
     }
 };
 
@@ -171,7 +173,7 @@ class FilmTile {
         }
     }
     //new AddSample function - added ray so we can output depth and other info,  changed by Joe B. 10/11/2017
-    virtual void AddSample(const Point2f &pFilm, Spectrum L,
+    void AddSample(const Point2f &pFilm, Spectrum L,
                    Float sampleWeight, RayDifferential *ray) {
         ProfilePhase _(Prof::AddFilmSample);
         if (L.y() > maxSampleLuminance)
@@ -229,7 +231,7 @@ class FilmTile {
     }
     Bounds2i GetPixelBounds() const { return pixelBounds; }
 
-  private:
+  protected: //changed so derived class can access
     // FilmTile Private Data
     const Bounds2i pixelBounds;
     const Vector2f filterRadius, invFilterRadius;
@@ -240,7 +242,7 @@ class FilmTile {
     friend class Film;
 };
 
-Film *CreateFilm(const ParamSet &params, std::unique_ptr<Filter> filter);
+virtual Film *CreateFilm(const ParamSet &params, std::unique_ptr<Filter> filter);
 
 }  // namespace pbrt
 

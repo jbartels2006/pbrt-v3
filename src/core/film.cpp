@@ -65,7 +65,11 @@ Film::Film(const Point2i &resolution, const Bounds2f &cropWindow,
     pixels = std::unique_ptr<Pixel[]>(new Pixel[croppedPixelBounds.Area()]);
     filmPixelMemory += croppedPixelBounds.Area() * sizeof(Pixel);
 
-    // Precompute filter weight table
+    //Allocate Ray storage
+    rays = std::unique_ptr<RayDifferential[]>(new RayDifferential[croppedPixelBounds.Area()]); //added for multichannel
+
+
+        // Precompute filter weight table
     int offset = 0;
     for (int y = 0; y < filterTableWidth; ++y) {
         for (int x = 0; x < filterTableWidth; ++x, ++offset) {
@@ -126,8 +130,8 @@ void Film::MergeFilmTile(std::unique_ptr<FilmTile> tile) {
         tilePixel.contribSum.ToXYZ(xyz);
         for (int i = 0; i < 3; ++i) mergePixel.xyz[i] += xyz[i];
         mergePixel.filterWeightSum += tilePixel.filterWeightSum;
-        RayDifferential &rayPixel = GetPixelRay(pixel);
-        rayPixel = *tilePixel.ray;
+        RayDifferential &rayPixel = GetPixelRay(pixel); //added for multchannel output
+        rayPixel = *tilePixel.ray; //added for multichannel output I think by doing it this way we will always get the ray from the last sample? I think this is okay?
     }
 }
 
